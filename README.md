@@ -24,3 +24,4 @@ Frequency: Finds how often each unique value appears and sorts them in descendin
 POST to URL:PORT/frequency/  
 body: {'data': list}
 response: [[value, # of appearences], [value, # of appearences], ...]
+notes: If a value is a list, every value in that list is considered.
