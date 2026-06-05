@@ -25,3 +25,8 @@ POST to URL:PORT/frequency/
 body: {'data': list}
 response: [[value, # of appearences], [value, # of appearences], ...]
 notes: If a value is a list, every value in that list is considered.
+
+Mean: Finds the mean value in a list.
+POST to URL:PORT/mean/
+response: {'mean': mean value, 'count': # of values in list}
+notes: If a value is a list, every value in that list is considered.

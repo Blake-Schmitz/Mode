@@ -63,3 +63,30 @@ def mode(data):
             mode['value'] = [value]
 
     return mode
+
+def mean(data):
+    """
+    Finds the mean value in a list.
+
+    Returns: {'mean': mean value, 'count': values in the list}
+
+    If a value is a list, every value in the list is considered.
+    """
+    result = 0
+    count = 0
+
+    if len(data) == 0:
+        return 0
+
+    for value in data:
+        if isinstance(value, list):
+            list_mean = mean(value)
+            result += list_mean['mean'] * list_mean['count']
+            count += list_mean['count']
+        else:
+            result += value
+            count += 1
+
+    result /= count
+
+    return {'mean': result, 'count': count}

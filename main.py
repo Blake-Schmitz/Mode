@@ -23,6 +23,11 @@ def frequency(request: ModeRequest):
     result = mode.frequency(request.data)
     return result
 
+@app.post('/mean/')
+def mean(request: ModeRequest):
+    result = mode.mean(request.data)
+    return result
+
 
 if __name__ == '__main__':
     uvicorn.run(app, host = URL, port = PORT)
